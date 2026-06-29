@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const ProjectCard = ({ project }) => {
   const {
@@ -13,15 +13,16 @@ const ProjectCard = ({ project }) => {
     liveLink,
     githubLink,
   } = project;
+  console.log(image);
 
   return (
-    <div className="group relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white shadow-lg hover:shadow-2xl transition-all duration-300">
+   <div className="group relative rounded-2xl overflow-hidden bg-gradient-to-br text-white shadow-lg hover:shadow-2xl transition-all duration-300">
 
       {/* Glow effect */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
 
       {/* Image */}
-      {/* <div className="relative w-full h-52 overflow-hidden">
+      <div className="relative w-full h-52 overflow-hidden">
         <Image
           src={image}
           alt={name}
@@ -29,58 +30,75 @@ const ProjectCard = ({ project }) => {
           className="object-cover group-hover:scale-110 transition duration-500"
         />
         <div className="absolute inset-0 bg-black/30"></div>
-      </div> */}
+      </div>
+      
 
       {/* Content */}
-      <div className="relative p-6 space-y-3">
+      <div className="relative p-6 space-y-4">
 
         <h3 className="text-xl font-bold text-center tracking-wide">
           {name}
         </h3>
 
-        <p className="text-xs text-center text-gray-300 uppercase tracking-widest">
-          {mainTechnologyStack}
-        </p>
+        {/* 1. Updated Tech Stack Section to match your screenshot pill styling */}
+        <div className="flex flex-wrap gap-2 justify-center pt-2">
+          {/* If mainTechnologyStack is an array, you can map over it. 
+              If it's a string, you can split it by comma: mainTechnologyStack.split(',') */}
+          {Array.isArray(mainTechnologyStack) ? (
+            mainTechnologyStack.map((tech, index) => (
+              <span 
+                key={index} 
+                className="px-3 py-1 text-sm font-semibold rounded-lg border border-teal-950/40 bg-blue-900 text-white tracking-wide shadow-inner"
+              >
+                {tech}
+              </span>
+            ))
+          ) : (
+            <span className="px-3 py-1 text-sm font-semibold rounded-lg border border-teal-950/40 bg-blue-900 text-white tracking-wide shadow-inner">
+              {mainTechnologyStack}
+            </span>
+          )}
+        </div>
 
-        <p className="text-sm text-center text-gray-300 line-clamp-3">
-          {briefDescription}
-        </p>
+       
 
-        {/* Buttons */}
-        <div className="mt-5 flex flex-col gap-3">
+        {/* 2. Updated Action Buttons Layout to be inline/horizontal */}
+        <div className="mt-6 flex items-center justify-center gap-4">
 
-          {/* GitHub */}
+          {/* Source Code / GitHub */}
           <a
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/btn flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/5 py-2 text-sm font-medium backdrop-blur-md hover:bg-white/10 transition"
+            className="flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/60 px-4 py-2 text-xs font-black tracking-wider uppercase text-white hover:bg-zinc-800 transition"
           >
-            GitHub
-            <FaArrowRight className="group-hover/btn:translate-x-1 transition" />
+            <FaGithub className="text-xl text-zinc-400" />
+            <span>Source Code</span>
           </a>
 
-          {/* Live */}
+          {/* Live Demo */}
           <a
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/btn flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 py-2 text-sm font-semibold hover:opacity-90 transition"
+            className="flex items-center gap-2 rounded-xl border border-teal-950/50 bg-teal-950/20 px-4 py-2 text-xs font-black tracking-wider uppercase text-white hover:bg-teal-950/40 transition"
           >
-            Live Link
-            <FaArrowRight className="group-hover/btn:translate-x-1 transition" />
+            <FaExternalLinkAlt className="text-lg text-cyan-400" />
+            <span>Live Demo</span>
           </a>
 
-          {/* Details */}
+        </div>
+
+        {/* Details Link (Kept subtle at the bottom center if still needed) */}
+        <div className="text-center pt-2">
           <Link
             href={`/projects/${_id}`}
-            className="group/btn flex items-center justify-center gap-2 rounded-lg border border-indigo-400/40 py-2 text-sm hover:bg-indigo-500/10 transition"
+            className="text-xs bg-primary p-2 rounded-2xl hover:text-indigo-300 transition underline underline-offset-4"
           >
             View Details
-            <FaArrowRight className="group-hover/btn:translate-x-1 transition" />
           </Link>
-
         </div>
+
       </div>
     </div>
   );

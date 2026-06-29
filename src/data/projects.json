@@ -1,29 +1,29 @@
 [
   {
     "_id": "665f1a2b3c4d5e6f7a8b9c03",
-    "image": "https://ibb.co/LDq8MZpq",
+    "image": "https://i.ibb.co/spD2hV3D/Screenshot-2026-06-17-014722.png",
     "name": "Care.xyz",
     "mainTechnologyStack": "NEXT.JS, Firebase, Tailwind CSS",
     "briefDescription": "A productivity application that helps users organize tasks, set deadlines, and track project progress.",
-    "liveLink": "https://carexyz-live.vercel.app",
-    "githubLink": "https://github.com/your-username/carexyz"
+    "liveLink": "https://care-xyz-delta.vercel.app/",
+    "githubLink": "https://github.com/Mitu-Rani-Sutradhar/care-next-project"
   },
   {
     "_id": "665f1a2b3c4d5e6f7a8b9c02",
-    "image": "https://ibb.co/B2b7j1hd",
+    "image": "https://i.ibb.co/xqWcG4nP/Screenshot-2026-06-17-015328.png",
     "name": "LocalChefBazaar",
     "mainTechnologyStack": "React.js, Express.js, MongoDB, Stripe",
     "briefDescription": "A modern e-commerce platform with secure payments, product management, and order tracking features.",
     "liveLink": "https://localchefbazaar-live.vercel.app",
-    "githubLink": "https://github.com/your-username/localchefbazaar"
+    "githubLink": "https://github.com/Mitu-Rani-Sutradhar/local-chef-bazaar-client"
   },
   {
     "_id": "665f1a2b3c4d5e6f7a8b9c01",
-    "image": "https://ibb.co/jPMRRRdX",
+    "image": "https://i.ibb.co/pBzyyygF/Screenshot-2026-06-17-015045.png",
     "name": "green-nest-breaking",
     "mainTechnologyStack": "React.js, Tailwind CSS, MongoDB, Firebase",
     "briefDescription": "A home care service platform that connects families with trusted babysitters, elderly caregivers, and home assistance providers.",
     "liveLink": "https://green-nest-breaking-live.vercel.app",
-    "githubLink": "https://github.com/your-username/green-nest-breaking"
+    "githubLink": "https://github.com/Mitu-Rani-Sutradhar/Green-code-assignment-9"
   }
 ]

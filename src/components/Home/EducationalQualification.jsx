@@ -1,128 +1,149 @@
+"use client";
+
 import React from "react";
-import { FaGraduationCap, FaUniversity, FaBookOpen } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaGraduationCap, FaSchool, FaBookOpen } from "react-icons/fa";
 
 const EducationalQualification = () => {
+  // শিক্ষাগত যোগ্যতার ডাটা অ্যারে
   const educationData = [
     {
-      degree: "Master of Arts (MA)",
-      institution: "Shahjalal University of Science and Technology",
-      location: "Sylhet, Bangladesh",
-      description:
-        "Successfully completed my Master of Arts degree, strengthening my analytical thinking, research abilities, communication skills, and problem-solving capabilities. This academic journey helped shape my perspective and professional growth.",
+      id: 1,
+      degree: "B.Sc in Computer Science & Engineering",
+      institution: "Your University Name",
+      duration: "2021 - 2025",
+      result: "CGPA: 3.80 / 4.00",
+      description: "Focused on software engineering, web development, algorithms, and database management systems.",
       icon: <FaGraduationCap />,
     },
     {
-      degree: "Bachelor of Arts (Honours)",
-      institution: "Shahjalal University of Science and Technology",
-      location: "Sylhet, Bangladesh",
-      description:
-        "Completed my Honours degree with a strong academic foundation. Throughout my studies, I developed critical thinking, teamwork, communication, and research skills that continue to support my growth as a Frontend Web Developer.",
-      icon: <FaUniversity />,
+      id: 2,
+      degree: "Higher Secondary Certificate (HSC)",
+      institution: "Your College Name",
+      duration: "2018 - 2020",
+      result: "GPA: 5.00 / 5.00",
+      description: "Science background with major focus on Mathematics, Physics, and ICT.",
+      icon: <FaSchool />,
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
-      institution: "Abdul Kadir Molla City College",
-      location: "Narsingdi, Bangladesh",
-      description:
-        "Completed Higher Secondary education, building the academic foundation that inspired my passion for learning and pursuing higher education.",
+      id: 3,
+      degree: "Secondary School Certificate (SSC)",
+      institution: "Your School Name",
+      duration: "2016 - 2018",
+      result: "GPA: 5.00 / 5.00",
+      description: "General Science with strong foundational knowledge in mathematics and basic computing.",
       icon: <FaBookOpen />,
     },
   ];
 
-  return (
-    <section
-      id="education"
-      className="py-20 md:py-24 bg-gradient-to-b from-base-100 to-base-200"
-    >
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        {/* Section Heading */}
-        <div className="text-center mb-16 md:mb-20">
-          <p className="text-primary font-semibold uppercase tracking-[4px]">
-            Academic Background
-          </p>
+  // কন্টেইনার অ্যানিমেশন (Stagger Effect)
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // একটি কার্ডের পর আরেকটি কার্ড আসবে
+      },
+    },
+  };
 
-          <h2 className="text-3xl md:text-5xl font-bold mt-3">
+  // প্রতিটি টাইমলাইন কার্ডের অ্যানিমেশন
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+      },
+    },
+  };
+
+  return (
+    <section id="education" className="py-24 bg-base-100 overflow-hidden">
+      <div className="max-w-5xl mx-auto px-6">
+        
+        {/* Section Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <p className="text-primary font-semibold uppercase tracking-widest text-sm">
+            Education & Learning
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold mt-3">
             Educational Qualification
           </h2>
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: 96 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="h-1 bg-primary mx-auto mt-5 rounded-full"
+          ></motion.div>
+        </motion.div>
 
-          <p className="max-w-3xl mx-auto mt-5 text-base-content/70 leading-7">
-            My academic background in Arts and Humanities has strengthened my
-            communication, analytical thinking, research, and problem-solving
-            abilities. Combined with my passion for technology and continuous
-            self-learning, these skills support my journey as a Frontend Web
-            Developer.
-          </p>
-
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6"></div>
-        </div>
-
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical Line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 h-full w-1 bg-primary/20 -translate-x-1/2"></div>
-
-          <div className="space-y-12">
-            {educationData.map((edu, index) => (
-              <div
-                key={index}
-                className={`flex flex-col lg:flex-row items-center ${
-                  index % 2 === 0
-                    ? "lg:flex-row"
-                    : "lg:flex-row-reverse"
-                }`}
+        {/* Timeline Layout - সম্পূর্ণ রেসপন্সিভ মোবাইল থেকে ডেস্কটপ */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="relative border-l border-base-content/20 ml-4 md:ml-32 space-y-12"
+        >
+          {educationData.map((edu) => (
+            <motion.div
+              key={edu.id}
+              variants={itemVariants}
+              className="relative pl-8 md:pl-12 group"
+            >
+              {/* টাইমলাইন আইকন এফেক্ট */}
+              <motion.div 
+                whileHover={{ scale: 1.2, rotate: 360 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="absolute -left-[21px] top-1 bg-base-100 border-2 border-primary text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md group-hover:bg-primary group-hover:text-primary-content transition-colors duration-300 cursor-pointer z-10"
               >
-                {/* Card */}
-                <div className="w-full lg:w-5/12">
-                  <div className="bg-base-100 border border-base-300 rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                    <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">
-                      {edu.degree}
-                    </h3>
+                {edu.icon}
+              </motion.div>
 
-                    <h4 className="text-lg font-semibold">
-                      {edu.institution}
-                    </h4>
-
-                    <p className="text-sm text-base-content/60 mb-4">
-                      {edu.location}
-                    </p>
-
-                    <p className="leading-7 text-base-content/80">
-                      {edu.description}
-                    </p>
-                  </div>
+              {/* কার্ড কন্টেন্ট (সম্পূর্ণ রেসপন্সিভ প্যাডিং ও শ্যাডো) */}
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="bg-base-200 rounded-3xl p-6 md:p-8 shadow-lg border border-base-content/5 hover:shadow-xl transition-all duration-300"
+              >
+                {/* ডিগ্রি ও সময়কাল */}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-base-content group-hover:text-primary transition-colors duration-300">
+                    {edu.degree}
+                  </h3>
+                  <span className="text-sm px-4 py-1.5 bg-primary/10 text-primary font-semibold rounded-full w-max">
+                    {edu.duration}
+                  </span>
                 </div>
 
-                {/* Timeline Icon */}
-                <div className="relative z-10 my-6 lg:my-0">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary text-white flex items-center justify-center text-2xl md:text-3xl shadow-2xl border-4 border-base-100">
-                    {edu.icon}
-                  </div>
+                {/* প্রতিষ্ঠান ও রেজাল্ট */}
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-base-content/70 font-medium mb-4 text-sm md:text-base">
+                  <span className="text-base-content font-semibold">{edu.institution}</span>
+                  <span className="hidden sm:inline text-base-content/30">|</span>
+                  <span className="text-primary font-bold bg-base-100 px-3 py-0.5 rounded-lg shadow-sm border border-base-content/5 w-max">
+                    {edu.result}
+                  </span>
                 </div>
 
-                {/* Spacer */}
-                <div className="hidden lg:block w-5/12"></div>
-              </div>
-            ))}
-          </div>
-        </div>
+                {/* বিবরণ বা ডেসক্রিপশন */}
+                <p className="text-sm md:text-base text-base-content/80 leading-relaxed">
+                  {edu.description}
+                </p>
+              </motion.div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-        {/* Highlight Card */}
-        <div className="mt-16 md:mt-24">
-          <div className="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Continuous Learning & Growth 🚀
-            </h3>
-
-            <p className="max-w-3xl mx-auto leading-7 md:leading-8">
-              While my formal education is in Arts and Humanities, my passion
-              for technology inspired me to pursue Frontend Development.
-              Through continuous learning, real-world projects, and hands-on
-              experience with modern web technologies, I have developed strong
-              skills in building responsive, user-friendly, and visually
-              engaging web applications.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

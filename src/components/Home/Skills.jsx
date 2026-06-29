@@ -1,4 +1,7 @@
+"use client"; 
+
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -41,17 +44,43 @@ const Skills = () => {
     { name: "Figma", icon: <SiFigma /> },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
+  };
+
   const SkillCategory = ({ title, skills }) => (
-    <div className="bg-base-100 rounded-3xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-base-100 rounded-3xl shadow-xl p-6 hover:shadow-2xl transition-shadow duration-300"
+    >
       <h3 className="text-2xl font-bold text-primary mb-6 text-center">
         {title}
       </h3>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
-          <div
+          <motion.div
             key={index}
-            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-base-200 hover:scale-105 transition duration-300"
+            variants={itemVariants}
+            whileHover={{ scale: 1.08, y: -5 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-base-200 cursor-pointer transition-colors duration-300 hover:bg-primary/5"
           >
             <span className="text-4xl text-primary mb-3">
               {skill.icon}
@@ -60,18 +89,24 @@ const Skills = () => {
             <span className="font-medium text-center">
               {skill.name}
             </span>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 
   return (
-    <section id="skills" className="py-24 bg-base-200">
+    <section id="skills" className="py-24 bg-base-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Section Heading */}
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <p className="text-primary font-semibold uppercase tracking-widest">
             My Expertise
           </p>
@@ -85,8 +120,14 @@ const Skills = () => {
             responsive, and user-friendly web applications.
           </p>
 
-          <div className="w-24 h-1 bg-primary mx-auto mt-5 rounded-full"></div>
-        </div>
+          <motion.div 
+            initial={{ width: 0 }}
+            whileInView={{ width: 96 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="h-1 bg-primary mx-auto mt-5 rounded-full"
+          ></motion.div>
+        </motion.div>
 
         {/* Skill Categories */}
         <div className="grid lg:grid-cols-3 gap-8">

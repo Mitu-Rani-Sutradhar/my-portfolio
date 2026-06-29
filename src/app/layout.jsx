@@ -25,21 +25,18 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header className="py-2 md:w-11/12 mx-auto">
-       
-            <Navbar></Navbar>
-        
-        </header>
-       <main className="py-2 md:w-11/12 mx-auto">
-         {children}
-       </main>
 
-        <footer className="py-2 md:w-11/12 mx-auto">
-          <Footer></Footer>
-        </footer>
-        
-        
-        </body>
+  <Navbar />
+
+  <main className="py-2 md:w-11/12 mx-auto">
+    {children}
+  </main>
+
+  <footer className="py-2 md:w-11/12 mx-auto">
+    <Footer />
+  </footer>
+
+</body>
     </html>
   );
 }
