@@ -9,31 +9,32 @@ const EducationalQualification = () => {
   const educationData = [
     {
       id: 1,
-      degree: "B.Sc in Computer Science & Engineering",
-      institution: "Your University Name",
-      duration: "2021 - 2025",
-      result: "CGPA: 3.80 / 4.00",
-      description: "Focused on software engineering, web development, algorithms, and database management systems.",
+      degree: "Master's in Bengali Language and Literature",
+      institution: "Shahjalal University of Science and Technology",
+      duration: "2018-2019",
+      result: "CGPA:  / 4.00",
+      description: "Focused on Bengali Language",
       icon: <FaGraduationCap />,
     },
     {
       id: 2,
-      degree: "Higher Secondary Certificate (HSC)",
-      institution: "Your College Name",
-      duration: "2018 - 2020",
-      result: "GPA: 5.00 / 5.00",
-      description: "Science background with major focus on Mathematics, Physics, and ICT.",
-      icon: <FaSchool />,
+      degree: "B.A(Hons) in Bengali Language and Literature",
+      institution: "Shahjalal University of Science and Technology",
+      duration: "2014-2018",
+      result: "CGPA: 3.34 / 4.00",
+      description: "Focused on Bengali Language",
+      icon: <FaGraduationCap />,
     },
     {
       id: 3,
-      degree: "Secondary School Certificate (SSC)",
-      institution: "Your School Name",
-      duration: "2016 - 2018",
+      degree: "Higher Secondary Certificate (HSC)",
+      institution: "Abdul Kadir Mollah City College",
+      duration: "2012-2014",
       result: "GPA: 5.00 / 5.00",
-      description: "General Science with strong foundational knowledge in mathematics and basic computing.",
-      icon: <FaBookOpen />,
-    },
+      description: "Arts background with major focus on English and bangla",
+      icon: <FaSchool />,
+    }
+    
   ];
 
   // কন্টেইনার অ্যানিমেশন (Stagger Effect)
@@ -135,10 +136,10 @@ const EducationalQualification = () => {
                   </span>
                 </div>
 
-                {/* বিবরণ বা ডেসক্রিপশন */}
-                <p className="text-sm md:text-base text-base-content/80 leading-relaxed">
-                  {edu.description}
-                </p>
+              
+
+
+               
               </motion.div>
             </motion.div>
           ))}

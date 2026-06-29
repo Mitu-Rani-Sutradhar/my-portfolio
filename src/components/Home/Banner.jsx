@@ -103,10 +103,10 @@ const Banner = () => {
             {/* Social Media Links with dynamic hover animations */}
             <motion.div variants={itemVariants} className="flex gap-4 justify-center lg:justify-start">
               {[
-                { icon: <FaGithub size={20} />, url: "https://github.com/yourusername", label: "GitHub" },
-                { icon: <FaLinkedin size={20} />, url: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-                { icon: <FaFacebook size={20} />, url: "https://facebook.com/yourusername", label: "Facebook" },
-                { icon: <FaTwitter size={20} />, url: "https://twitter.com/yourusername", label: "Twitter" }
+                { icon: <FaGithub size={20} />, url: "https://github.com/Mitu-Rani-Sutradhar", label: "GitHub" },
+                { icon: <FaLinkedin size={20} />, url: "https://www.linkedin.com/in/mituranisutradhar/", label: "LinkedIn" },
+                { icon: <FaFacebook size={20} />, url: "https://www.facebook.com/mitu.sutradhar.919113", label: "Facebook" },
+               
               ].map((social, idx) => (
                 <motion.a
                   key={idx}

@@ -20,8 +20,8 @@ const projects = [
     "name": "LocalChefBazaar",
     "mainTechnologyStack": "React.js, Node.js, Express.js, MongoDB, Stripe",
     "briefDescription": "A modern e-commerce platform with secure payments, product management, and order tracking features.",
-    "liveLink": "https://localchefbazaar-live.vercel.app",
-    "githubLink": "https://github.com/your-username/localchefbazaar"
+    "liveLink": "https://chef-bazaar-8992b.web.app/",
+    "githubLink": "https://github.com/Mitu-Rani-Sutradhar/local-chef-bazaar-client"
   },
   {
     "_id": "665f1a2b3c4d5e6f7a8b9c01",
@@ -29,8 +29,8 @@ const projects = [
     "name": "green-nest-breaking",
     "mainTechnologyStack": "React.js, MongoDB, Firebase",
     "briefDescription": "This platform connects with trusted babysitters, elderly caregivers, and home assistance providers.",
-    "liveLink": "https://green-nest-breaking-live.vercel.app",
-    "githubLink": "https://github.com/your-username/green-nest-breaking"
+    "liveLink": "https://green-nest-breaking.web.app/",
+    "githubLink": "https://github.com/Mitu-Rani-Sutradhar/Green-code-assignment-9"
   }
 ];
 

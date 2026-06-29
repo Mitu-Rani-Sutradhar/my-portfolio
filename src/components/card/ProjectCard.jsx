@@ -36,7 +36,7 @@ const ProjectCard = ({ project }) => {
       {/* Content */}
       <div className="relative p-6 space-y-4">
 
-        <h3 className="text-xl font-bold text-center tracking-wide">
+        <h3 className="text-xl text-black bg-primary rounded-2xl py-2 font-bold text-center tracking-wide">
           {name}
         </h3>
 

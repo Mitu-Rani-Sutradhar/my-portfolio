@@ -23,7 +23,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
     "name": "LocalChefBazaar",
     "mainTechnologyStack": "React.js, Express.js, MongoDB, Stripe",
     "briefDescription": "A modern e-commerce platform with secure payments, product management, and order tracking features.",
-    "liveLink": "https://localchefbazaar-live.vercel.app",
+    "liveLink": "https://chef-bazaar-8992b.web.app/",
     "githubLink": "https://github.com/Mitu-Rani-Sutradhar/local-chef-bazaar-client"
   },
   {
@@ -32,7 +32,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
     "name": "green-nest-breaking",
     "mainTechnologyStack": "React.js, Tailwind CSS, MongoDB, Firebase",
     "briefDescription": "A home care service platform that connects families with trusted babysitters, elderly caregivers, and home assistance providers.",
-    "liveLink": "https://green-nest-breaking-live.vercel.app",
+    "liveLink": "https://green-nest-breaking.web.app/",
     "githubLink": "https://github.com/Mitu-Rani-Sutradhar/Green-code-assignment-9"
   }
 ]
