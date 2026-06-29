@@ -156,7 +156,7 @@ const Contact = () => {
 
           <div className="flex flex-wrap justify-center gap-5 md:gap-6">
             <motion.a
-              href="https://github.com/yourusername"
+              href="https://github.com/Mitu-Rani-Sutradhar"
               target="_blank"
               rel="noopener noreferrer"
               variants={iconVariants}
@@ -168,7 +168,7 @@ const Contact = () => {
             </motion.a>
 
             <motion.a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/mituranisutradhar/"
               target="_blank"
               rel="noopener noreferrer"
               variants={iconVariants}
@@ -180,7 +180,7 @@ const Contact = () => {
             </motion.a>
 
             <motion.a
-              href="https://www.facebook.com/share/1K2WddsLq7/"
+              href="https://www.facebook.com/mitu.sutradhar.919113/"
               target="_blank"
               rel="noopener noreferrer"
               variants={iconVariants}

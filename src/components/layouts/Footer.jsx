@@ -77,9 +77,9 @@ const Footer = () => {
             className="flex gap-4"
           >
             {[
-              { icon: <FaGithub />, url: "https://github.com/yourusername" },
-              { icon: <FaLinkedin />, url: "https://linkedin.com/in/yourusername" },
-              { icon: <FaFacebook />, url: "https://facebook.com/yourusername" },
+              { icon: <FaGithub />, url: "https://github.com/Mitu-Rani-Sutradhar" },
+              { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/mituranisutradhar/" },
+              { icon: <FaFacebook />, url: "https://www.facebook.com/mitu.sutradhar.919113/" },
             ].map((social, idx) => (
               <motion.a
                 key={idx}
