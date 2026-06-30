@@ -109,7 +109,7 @@ const Contact = () => {
 
             <div className="overflow-hidden">
               <h3 className="text-lg md:text-xl font-bold group-hover:text-primary transition-colors duration-200">
-                Email Address
+                   Email Address
               </h3>
               <p className="text-sm md:text-base text-base-content/70 break-all mt-0.5">
                 mitusutradhar4965@gmail.com

@@ -60,11 +60,11 @@ const Banner = () => {
               whileHover={{ scale: 1.02, x: 5 }}
               className="text-2xl md:text-3xl font-semibold text-gray-500 mb-6 cursor-default origin-center lg:origin-left transition-colors hover:text-primary"
             >
-              Full-Stack Web Developer
+              Frontend Web Developer
             </motion.h2>
 
             <motion.p variants={itemVariants} className="text-gray-600 mb-8 leading-relaxed">
-              Passionate Full-Stack Web Developer skilled in building modern,
+              Passionate Frontend Web Developer skilled in building modern,
               responsive, and scalable web applications using React, Next.js,
               Node.js, Express.js, and MongoDB. I enjoy creating clean user
               interfaces and solving real-world problems through technology.

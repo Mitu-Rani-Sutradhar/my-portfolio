@@ -50,7 +50,7 @@ const Footer = () => {
               Mitu<span className="text-primary inline-block group-hover:scale-125 transition-transform duration-300">.</span>
             </h2>
             <p className="text-sm md:text-base text-base-content/70 mt-1.5 font-medium">
-              Full-Stack Web Developer
+              Frontend Web Developer
             </p>
           </motion.div>
 

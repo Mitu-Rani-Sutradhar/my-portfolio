@@ -89,12 +89,12 @@ const AboutMe = () => {
             className="space-y-5"
           >
             <motion.h3 variants={textVariants} custom={0} className="text-3xl font-bold mb-6">
-              Full-Stack Web Developer
+              Frontend Web Developer
             </motion.h3>
 
             <motion.p variants={textVariants} custom={1} className="text-base-content/80 leading-8">
               Hello! I'm <span className="font-bold text-primary">Mitu Rani Sutradhar</span>,
-              a passionate Full-Stack Web Developer who loves transforming ideas
+              a passionate Frontend Web Developer who loves transforming ideas
               into beautiful and interactive web experiences. My journey into
               programming started with curiosity about how websites work, and
               that curiosity quickly became a passion for building modern,
