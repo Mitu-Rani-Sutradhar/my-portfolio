@@ -12,7 +12,7 @@ const EducationalQualification = () => {
       degree: "Master's in Bengali Language and Literature",
       institution: "Shahjalal University of Science and Technology",
       duration: "2018-2019",
-      result: "CGPA:  / 4.00",
+      result: "CGPA: 3.50/ 4.00",
       description: "Focused on Bengali Language",
       icon: <FaGraduationCap />,
     },
