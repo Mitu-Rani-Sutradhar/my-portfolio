@@ -74,11 +74,10 @@ const text = "Frontend Web Developer";
       {char === " " ? "\u00A0" : char}
     </motion.span>
   ))}
-</motion.h2>
+        </motion.h2>
 
-এতে F → Fr → Fro → ... → Frontend Web Developer এর মতো letter-by-letter অনুভূতি হবে এবং animation non-stop loop করবে।
 
-            <motion.p variants={itemVariants} className="text-gray-600 mb-8 leading-relaxed">
+           <motion.p variants={itemVariants} className="text-gray-600 mb-8 leading-relaxed">
               Passionate Frontend Web Developer skilled in building modern,
               responsive, and scalable web applications using React, Next.js,
               Node.js, Express.js, and MongoDB. I enjoy creating clean user
