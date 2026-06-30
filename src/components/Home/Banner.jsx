@@ -79,8 +79,8 @@ const Banner = () => {
                 whileTap={{ scale: 0.97 }}
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/MITU RANI SUTRADHAR Resume (1) (4).pdf";
-                  link.download = "MITU RANI SUTRADHAR Resume (1) (4).pdf";
+                  link.href = "/MITU RANI SUTRADHAR Resume (1) (13).pdf";
+                  link.download = "MITU RANI SUTRADHAR Resume (1) (13).pdf";
                   link.click();
                 }}
               >
