@@ -32,7 +32,7 @@ const Banner = () => {
       transition: { type: "spring", stiffness: 100, damping: 15 },
     },
   };
-
+const text = "Frontend Web Developer";
   return (
     // Added overflow-x-hidden to prevent unexpected mobile horizontal scroll clipping during slide-ins
     <section className="min-h-screen flex items-center bg-gradient-to-br from-orange-50 via-white to-orange-100 py-12 lg:py-0 overflow-x-hidden">
@@ -55,13 +55,28 @@ const Banner = () => {
             </motion.h1>
 
             {/* FIXED FOR MOBILE: Tied back into itemVariants so it follows the container stagger stream properly, and updated transform origins */}
-            <motion.h2 
-              variants={itemVariants}
-              whileHover={{ scale: 1.02, x: 5 }}
-              className="text-2xl md:text-3xl font-semibold text-gray-500 mb-6 cursor-default origin-center lg:origin-left transition-colors hover:text-primary"
-            >
-              Frontend Web Developer
-            </motion.h2>
+         <motion.h2
+  className="text-2xl md:text-3xl font-semibold text-gray-500 mb-6 cursor-default origin-center lg:origin-left hover:text-primary"
+>
+  {text.split("").map((char, index) => (
+    <motion.span
+      key={index}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: [0, 1, 1, 0] }}
+      transition={{
+        duration: 2,
+        delay: index * 0.08,
+        repeat: Infinity,
+        repeatDelay: 0,
+      }}
+      className="inline-block"
+    >
+      {char === " " ? "\u00A0" : char}
+    </motion.span>
+  ))}
+</motion.h2>
+
+এতে F → Fr → Fro → ... → Frontend Web Developer এর মতো letter-by-letter অনুভূতি হবে এবং animation non-stop loop করবে।
 
             <motion.p variants={itemVariants} className="text-gray-600 mb-8 leading-relaxed">
               Passionate Frontend Web Developer skilled in building modern,
