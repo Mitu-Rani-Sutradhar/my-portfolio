@@ -94,12 +94,12 @@ const text = "Frontend Web Developer";
                 onClick={() => {
                   const link = document.createElement("a");
                   link.href = "/MITU RANI SUTRADHAR Resume (1) (13).pdf";
-                  link.download = "MITU RANI SUTRADHAR Resume (1) (13).pdf";
+                 
                   link.click();
                 }}
               >
-                Download Resume
-                <Download size={18} aria-hidden="true" />
+                View Resume
+              
               </motion.button>
 
               <motion.a
