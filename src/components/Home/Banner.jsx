@@ -32,7 +32,7 @@ const Banner = () => {
       transition: { type: "spring", stiffness: 100, damping: 15 },
     },
   };
-const text = "Frontend Web Developer";
+const text = "Full-Stack Web Developer";
   return (
     // Added overflow-x-hidden to prevent unexpected mobile horizontal scroll clipping during slide-ins
     <section className="min-h-screen flex items-center bg-gradient-to-br from-orange-50 via-white to-orange-100 py-12 lg:py-0 overflow-x-hidden">
@@ -78,7 +78,7 @@ const text = "Frontend Web Developer";
 
 
            <motion.p variants={itemVariants} className="text-gray-600 mb-8 leading-relaxed">
-              Passionate Frontend Web Developer skilled in building modern,
+              Passionate Full-Stack Web Developer skilled in building modern,
               responsive, and scalable web applications using React, Next.js,
               Node.js, Express.js, and MongoDB. I enjoy creating clean user
               interfaces and solving real-world problems through technology.
