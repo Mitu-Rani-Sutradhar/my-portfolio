@@ -93,7 +93,7 @@ const text = "Full-Stack Web Developer";
                 whileTap={{ scale: 0.97 }}
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/MITU RANI SUTRADHAR Resume (1) (13).pdf";
+                  link.href = "/Mitu's Full-Stack Web Developer Resume.pdf";
                  
                   link.click();
                 }}

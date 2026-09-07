@@ -112,7 +112,7 @@ const Contact = () => {
                    Email Address
               </h3>
               <p className="text-sm md:text-base text-base-content/70 break-all mt-0.5">
-                mitusutradhar4965@gmail.com
+                mitusutradharwebdeveloper@gmail.com
               </p>
             </div>
           </motion.a>
